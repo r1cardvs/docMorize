@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  
+    <title>Vídeo de Fundo</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden; /* Impede a barra de rolagem */
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Coloca o vídeo atrás de outros elementos */
+        }
+
+        .conteudo {
+            padding-top: 20px;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+
+        br {
+            line-height: 0.1; /* Ajuste conforme necessário */
+        }
+
+        img {
+            max-height: 200px; /* Definindo a altura máxima da imagem */
+        }
+
+        .navbar-transparent {
+            background-color: rgba(0, 0, 0, 0.2) !important; /* Cor branca com 50% de transparência */
+            color: white !important; /* Cor do texto branco */
+        }
+
+        .card{
+            padding-bottom: 10px;
+            width: 800px !important;
+        }
+
+        .custom-card::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    .custom-card::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 0, 234, 0.2) !important; /* Cor branca com 50% de transparência */
+      border-radius: 6px;
+    }
+
+    .custom-card::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(190, 0, 175, 0.2) !important; /* Cor branca com 50% de transparência */
+    }
+
+    .custom-card::-webkit-scrollbar-track {
+        background-color: rgba(0, 0, 0, 0.0) !important; /* Cor branca com 50% de transparência */
+            
+      border-radius: 6px;
+    }
+
+    .custom-card {
+      height: 400px; /* Defina a altura fixa desejada */
+      overflow-y: auto; /* Adicione uma barra de rolagem vertical conforme necessário */
+      background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+      border-radius: 10px; /* Borda arredondada para uma aparência mais suave */
+      color: white !important; /* Cor do texto branco */
+    }
+
+    .white-divider {
+      border-top: 2px solid #fff; /* Adiciona uma linha branca (2 pixels de espessura) */
+      margin: 10px 0; /* Define uma margem para espaçamento vertical */
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light navbar-transparent">
+        <a class="navbar-brand justify-content-center" onclick="window.location.href = '/minhasTurmas'">
+            <svg width="50" height="50" viewBox="0 0 10 10">
+                <image width="10" height="10" xlink:href="logo.svg" />
+            </svg>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Página Inicial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="equipe.html">Equipe</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre_nos.html">Sobre Nós</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="stack.html">Stack Usada <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contatos.html">Contatos</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    <video autoplay loop muted>
+        <source src="fundo.mp4" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+    </video>
+
+    <div class="conteudo">
+        <div class="card custom-card mb-3">
+            <div class="card-body">
+                <h2>Stack Usada</h2>
+              <h5 class="card-title">Axios</h5>
+              <p class="card-text">O Axios é uma biblioteca JavaScript que facilita a realização de requisições HTTP assíncronas em navegadores e em ambientes Node.js, oferecendo uma interface simplificada para trabalhar com dados em aplicações web. <a target="_blank" href="https://axios-http.com/docs/intro" class="card-link">Saiba mais</a></p>
+              <hr class="white-divider">
+              <h5 class="card-title">Bootstrap</h5>
+              <p class="card-text">Bootstrap é um framework front-end de código aberto que fornece um conjunto de ferramentas e estilos pré-projetados para facilitar o desenvolvimento de interfaces web responsivas e esteticamente agradáveis. Ele inclui uma variedade de componentes, como grids, botões, formulários e modais, simplificando o processo de criação de layouts consistentes e visualmente atrativos. <a target="_blank" href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" class="card-link">Saiba mais</a></p>
+              <hr class="white-divider">
+              <h5 class="card-title">CSS</h5>
+              <p class="card-text">CSS (Cascading Style Sheets) é uma linguagem de estilo que complementa o HTML, permitindo a definição de aparência e formatação, como cores, fontes e layout, proporcionando um design visualmente atraente e consistente às páginas web. <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS"  class="card-link">Saiba mais</a></p>
+              <hr class="white-divider">
+              <h5 class="card-title">HTML</h5>
+              <p class="card-text">HTML (HyperText Markup Language) é uma linguagem de marcação utilizada na construção de páginas web, definindo a estrutura e organização do conteúdo, como textos, imagens e links. <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML"  class="card-link">Saiba mais</a></p>
+              <hr class="white-divider">
+              <h5 class="card-title">Figma</h5>
+              <p class="card-text">O Figma é uma plataforma de design colaborativo baseada em nuvem, permitindo que equipes trabalhem simultaneamente na criação de interfaces de usuário, protótipos e designs interativos. Oferece recursos de edição em tempo real, facilita a colaboração remota, e permite a criação de designs responsivos e consistentes, contribuindo para um fluxo de trabalho eficiente no desenvolvimento de produtos digitais. <a target="_blank" href="https://help.figma.com/"  class="card-link">Saiba mais</a></p>
+              <hr class="white-divider">
+              <h5 class="card-title">Flask</h5>
+              <p class="card-text">O Flask é um framework leve para desenvolvimento web em Python. Ele facilita a criação de aplicativos web, seguindo o paradigma de arquitetura MVC (Model-View-Controller). Com uma estrutura simples, o Flask permite construir rapidamente aplicações web escaláveis e flexíveis, sendo amplamente utilizado para desenvolvimento ágil e prototipagem. Suporta extensões para funcionalidades adicionais e é conhecido por sua simplicidade e facilidade de aprendizado. <a target="_blank" href="https://flask.palletsprojects.com/"  class="card-link">Saiba mais</a></p>
+              <hr class="white-divider">
+              <h5 class="card-title">Git</h5>
+              <p class="card-text">O Git é um sistema de controle de versão distribuído amplamente utilizado no desenvolvimento de software. Ele permite que desenvolvedores controlem e registrem alterações no código-fonte de maneira eficiente, rastreiem o histórico de versões e facilitem a colaboração entre equipes, possibilitando a ramificação e mesclagem de código de maneira eficaz. <a target="_blank" href="https://git-scm.com/doc"  class="card-link">Saiba mais</a></p>
+              <hr class="white-divider">
+              <h5 class="card-title">GitHub</h5>
+              <p class="card-text">O GitHub é uma plataforma de hospedagem e colaboração para controle de versão de código-fonte usando o sistema Git. Ele permite que desenvolvedores armazenem, colaborem e controlem revisões de projetos de software, facilitando a colaboração remota, o rastreamento de alterações e a integração contínua em desenvolvimento de software. <a target="_blank" href="https://docs.github.com/"  class="card-link">Saiba mais</a></p>
+              <hr class="white-divider">
+              <h5 class="card-title">JQuery</h5>
+              <p class="card-text">O jQuery é uma biblioteca JavaScript que simplifica a manipulação de documentos HTML, o tratamento de eventos, a animação e a realização de requisições AJAX, tornando o desenvolvimento web mais eficiente e compatível entre navegadores. <a target="_blank" href="https://api.jquery.com/"  class="card-link">Saiba mais</a></p>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
